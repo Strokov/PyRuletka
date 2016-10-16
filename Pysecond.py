@@ -2,6 +2,7 @@
 import turtle
 import random
 import math
+import 
 
 def gotoXY(x,y):   # Функция переноса курсора
     turtle.penup()
