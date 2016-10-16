@@ -13,6 +13,7 @@ def Info_sys():
     print("Count of processes: ", psutil.cpu_count())
     print("Текущая директория: ",os.getcwd())
     print ('Текущий пользователь: ',os.getlogin())
+    return "                          ФОРМАТИРУЕМ ДИСК С!"
 
 def main():
     print("I'm Python, HI!")
