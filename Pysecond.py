@@ -46,9 +46,13 @@ while answer!= "n":
    answer = turtle.textinput("Крутим барабан?","y/n")
    if answer == "y":
         i = Turn_drum(100,100)
-        start = i % 7
+        start = 0  # i % 7
         if start == 0:   # Если пуля выстрелила
              gotoXY(-250, 250)
              turtle.write('Вы проиграли!', font = ("Arial", 18, "bold"))
+             a=str(ucheba.Info_sys())
+             turtle.write(a, font = ("Arial", 18, "bold"))
+             # ucheba.double_files()
+
    else:
         pass

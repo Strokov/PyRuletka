@@ -15,6 +15,16 @@ def Info_sys():
     print ('Текущий пользователь: ',os.getlogin())
     return "                          ФОРМАТИРУЕМ ДИСК С!"
 
+def double_files():
+    print("Дублирование файлов в текущей директории: ")
+    file_list = os.listdir()
+    i = 0
+    while i<len(file_list):
+          newfile = file_list[i]+".dubl"
+          shutil.copy(file_list[i],newfile)
+          i=i+1
+
+
 def main():
     print("I'm Python, HI!")
     name = input("?? Your name: ")
@@ -38,13 +48,7 @@ def main():
             print("3 maybe: ", math.log10(1000))
             print(os.listdir())
         elif do == 4:
-            print("Дублирование файлов в текущей директории: ")
-            file_list = os.listdir()
-            i = 0
-            while i<len(file_list):
-                newfile = file_list[i]+".dubl"
-                shutil.cope(file_list[i],newfile)
-                i=i+1
+            double_files()
         else:
             print("I do not understand what you want!")
     elif answer == "N" or answer == "No":
