@@ -2,7 +2,7 @@
 import turtle
 import random
 import math
-import 
+import ucheba
 
 def gotoXY(x,y):   # Функция переноса курсора
     turtle.penup()
@@ -35,6 +35,7 @@ def Turn_drum(x,y):      # Функция анимации вращения ба
     Circle(22, 'brown')
     return i
 
+
 turtle.speed(0)
 
 Draw_drum(100,100)
@@ -42,12 +43,12 @@ Draw_drum(100,100)
 answer = ""
 start = 0
 while answer!= "n":
-    answer = turtle.textinput("Крутим барабан?","y/n")
-    if answer == "y":
+   answer = turtle.textinput("Крутим барабан?","y/n")
+   if answer == "y":
         i = Turn_drum(100,100)
         start = i % 7
         if start == 0:   # Если пуля выстрелила
-            gotoXY(-250, 250)
-            turtle.write('Вы проиграли!', font = ("Arial", 18, "bold"))
-    else:
+             gotoXY(-250, 250)
+             turtle.write('Вы проиграли!', font = ("Arial", 18, "bold"))
+   else:
         pass
